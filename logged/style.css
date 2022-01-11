@@ -1,0 +1,52 @@
+body {
+    background: linear-gradient(80deg,  #170581, #680202f8, #410505 );
+    background-size: 100% 500%; 
+}
+
+/* // NAVBAR // */
+#nav-itens{
+background-color: rgba(20, 3, 3, 0.281);
+}
+
+#home-link {
+    color: rgb(237, 243, 243);
+    padding-top: 5px;
+    text-decoration: none;
+    border: groove rgb(118, 139, 0);
+    text-align: center;
+    border-radius: 18px;
+
+}
+#logout{
+    text-align: end;
+    color: rgb(240, 238, 245);
+    padding-top: 5px;
+    text-decoration: none;
+    
+    
+}
+
+/* // FOOTER  // */
+#social{
+    font-size: 60px;
+    cursor: pointer;
+    text-align: center; 
+    background : rgba(2, 18, 88, 0.295);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+/* // h1 // */
+
+.title-log{
+    color: rgb(248, 246, 246);
+    text-align: center;
+    background : rgba(10, 200, 207, 0.295);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+#blank{
+    height: 20vh;    
+    }
+
+
+
