@@ -11,7 +11,7 @@
             <a href="https://api.whatsapp.com/send?phone=5531985808502" target="_blank"><i
                     class="fab fa-whatsapp-square"></i></a>
             <a href="https://github.com/Leonardu76" target="_blank" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://leonardu76.github.io/CurriculoNew/" target="_blank" target="_blank"><i class="fas fa-passport"></i></a>
+            <a href="https://leonardosouza.herokuapp.com/" target="_blank" target="_blank"><i class="fas fa-passport"></i></a>
 
         </div>
         </div>
