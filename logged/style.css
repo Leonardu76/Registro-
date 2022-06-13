@@ -17,11 +17,14 @@ background-color: rgba(20, 3, 3, 0.281);
     border-radius: 18px;
 
 }
-#logout{
-    text-align: end;
-    color: rgb(240, 238, 245);
+#sair{
+    color: rgb(237, 243, 243);
     padding-top: 5px;
-    text-decoration: none;
+    border: groove rgb(118, 139, 0);
+    border-radius: 18px;
+    background-color: rgba(18, 22, 21, 0.11);
+    text-align: end;
+
     
     
 }
