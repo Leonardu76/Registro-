@@ -11,8 +11,8 @@ if (isset($_POST['email']) && !empty($_POST['email'])
 
 $email = addslashes($_POST['email']);
 $name = addslashes($_POST['name']);
-$password = addslashes(md5($_POST['password']));
-$password2 = addslashes(md5($_POST['password2']));
+$password = addslashes($_POST['password']);
+$password2 = addslashes($_POST['password2']);
 
 
 } else {
@@ -23,7 +23,7 @@ $password2 = addslashes(md5($_POST['password2']));
 } 
 // -----------Verificando se há o email no banco-----------------
 
-$bdEmail = $conn->prepare("SELECT * FROM /*tabela*/ WHERE email = :e");
+$bdEmail = $conn->prepare("SELECT * FROM login_user WHERE email = :e");
 $bdEmail->bindValue(":e", $email);
 $bdEmail->execute();
 if($bdEmail->rowCount() > 0)
@@ -36,16 +36,16 @@ if($bdEmail->rowCount() > 0)
 
    
 } else {
-    $query = "INSERT INTO user (name, email, password) VALUES (:name, :email, :password)";
+    $query = "INSERT INTO login_user (nome, email, senha) VALUES (:n, :e, :s)";
     $stmt = $conn->prepare($query);
-    $stmt->bindParam(":name", $name);
-    $stmt->bindParam(":email", $email);
-    $stmt->bindParam(":password", ($password));
+    $stmt->bindParam(":n", $name);
+    $stmt->bindParam(":e", $email);
+    $stmt->bindParam(":s", $password);
 
     try{
     $stmt->execute();
     if(true){
-        ?><div class="container"><h2 class='cadSucess'>Cadastro realizado! Por favor faça o login. <a href="../login/login.php">Clique aqui.</a></h2></div>
+        ?><div class="container"><h2 class='cadSucess'>Cadastro realizado! Por favor faça o login. <a href="../index.php">Clique aqui.</a></h2></div>
         <?php
     }
         } catch(PDOException $e){
