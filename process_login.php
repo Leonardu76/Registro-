@@ -9,9 +9,9 @@ if(isset($_SESSION['id'])){
 
 
 $email = addslashes($_POST['email']);
-$password = addslashes(md5($_POST['password']));
+$password = addslashes($_POST['password']);
 
-    $query = "SELECT * FROM  /*Tabela*/  WHERE email = :e AND password = :p";
+    $query = "SELECT * FROM  login_user  WHERE email = :e AND senha = :p";
         
     $stmt  = $conn->prepare($query);
     
@@ -23,7 +23,7 @@ $password = addslashes(md5($_POST['password']));
     if ($stmt->rowCount() > 0) {
         $dado = $stmt->fetch();
         $_SESSION['id'] = $dado['id'];
-        $_SESSION['name'] = $dado['name'];
+        $_SESSION['nome'] = $dado['nome'];
 
         if(isset($_SESSION['id'])){
             header("Location: logged/logged.php");
@@ -31,7 +31,7 @@ $password = addslashes(md5($_POST['password']));
             header("Location: login.php");
 
     }    
-   } else{ 
+ } else{ 
         ?><h2 class='cadErr'>Email ou senha incorreta!</h2>
     <?php
 
