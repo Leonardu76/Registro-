@@ -24,15 +24,18 @@ if(isset($_GET['sair'])){
 </head>
 <body>
 <header>
-<div class="col-sm-12"  id="nav-itens">
+<div class="container"  id="nav-itens">
     <div class="row">
         
   <a class="col-sm-2" id="home-link" href="">Inicio</a>
-  <a  class="col-sm-9" name="sair" id="logout" href="sair">Sair</a>
+  <form action="" method="GET">
+  <button  class="col-sm-12" name="sair" id="sair">Sair</button>
+
+</form>
 </div>
 </div>
 
-<h1 class="title-log">Bem vindo(a) <?=$_SESSION['name']?>!!</h1>
+<h1 class="title-log">Bem vindo(a) <?=$_SESSION['nome']?>!!</h1>
 
 
 <section id="blank"></section>
